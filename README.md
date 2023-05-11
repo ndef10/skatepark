@@ -1,12 +1,12 @@
 # ¡Bienvenido al sitio web Skate Park!
 
-Este es un sitio web realizado durante el bootcam y consiste en una plataforma web en la que quienes quieran participar en una competencia de Skatese se podrán registrar y revisar el estado de su solicitud
+Este es un sitio web realizado durante el bootcam y consiste en una plataforma web en la que quienes quieran participar en una competencia de Skate se se podrán registrar y revisar el estado de su solicitud
 
 ## Tecnologías utilizadas
 Este sitio web está construido con:
 
-- HTML,
-- CSS,
+- HTML
+- CSS
 - JavaScript
 - Express
 - Handlebars
@@ -31,7 +31,7 @@ registrados y su estado de revisión.
 - La vista del administrador debe mostrar los participantes registrados y permitir
 aprobarlos para cambiar su estado.
 
-- Se debe persistir la información de los usuarios en PostgreSQL
+- Se debe persistir la información de los usuarios en PostgreSQL.
 
 ## Demo del sitio web
 Puede ver una demo del sitio web en el siguiente enlace: (https://www.loom.com/share/12c17e358bb34bffa0bd44cb8feb4ca0)

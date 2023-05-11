@@ -1,0 +1,59 @@
+<h1>Skate Park</h1>
+
+<div class="py-4">
+  <h2>Administración</h2>
+  <hr class="w-100" />
+
+  <table class="table w-80 m-auto">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Foto</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Años de experiencia</th>
+        <th scope="col">Especialidad</th>
+        <th scope="col">Estado</th>
+      </tr>
+    </thead>
+
+    <tbody id="cuerpo">
+
+      {{#each usuarios}}
+      <tr>
+        <td>{{@index}}</td>
+        <td>
+          <div>                
+            <img src="{{this.foto}}" height="55" Width="75">                
+          </div>
+        </td>
+        <td>{{this.nombre}}</td>
+        <td>{{this.anos_experiencia}}</td>
+        <td>{{this.especialidad}}</td>
+        <td><input type="checkbox" {{#if this.estado}} checked {{/if}} onclick="changeStatus({{this.id}}, this)"></td>
+      </tr>
+      {{/each}}
+
+    </tbody>
+  </table>
+
+<script>
+
+  const changeStatus = async (id, e) => {
+    const estado = e.checked
+    try {
+      await axios.put('/index', {
+        id,
+        estado
+      })
+      alert(estado ? 'Usuario aprobado' : 'Usuario en revision')  
+    }
+    catch ({ response }) {
+      const { data } = response
+      const { error } = data
+      alert(error)
+    }    
+  }
+  
+</script>
+
+      
